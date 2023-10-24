@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="hyundai_em" type="result.py" name="result" output="screen">
+    </node>
+    <node pkg="hyundai_em" type="test_weather_snow.py" name="weather">
+    </node>
+    <node pkg="hyundai_em" type="test_speed_limit.py" name="speed_limit">
+    </node>
+    <node pkg="md" type="md_platform.py" name="md_platform">
+    </node>
+</launch>

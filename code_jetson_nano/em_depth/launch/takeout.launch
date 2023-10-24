@@ -1,0 +1,19 @@
+<launch>
+   <node pkg="em_depth" type="em_depth" name="em_depth_node">
+      <param name="voxel_size" value="0.15"/>
+      <param name="floor_distance" value="0.01"/>
+      <rosparam param="hsv_lower">[0, 0, 220]</rosparam>
+      <rosparam param="hsv_upper">[255, 255, 255]</rosparam>
+   </node>
+   <node pkg="em_depth" type="black_ice_node.py" name="black_ice_node" output="screen">
+   </node>
+   <node pkg="em_depth" type="lidar_lee.py" name="pointcloud_processor">
+   </node>
+   <node pkg="em_depth" type="linear_pca.py" name="linear_pca">
+   </node>
+   <node pkg="em_depth" type="snowpub.py" name="snowpub">
+   </node>
+   <node pkg="laser_to_pointcloud" type="laser_to_pointcloud_node" name="laser_to_pointcloud_node">
+   </node>
+</launch>
+

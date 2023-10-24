@@ -1,0 +1,1 @@
+# Embedded_software_Contest_TAKEOUT
